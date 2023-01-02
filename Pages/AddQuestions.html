@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+
+	<title> Add video page </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+	<!-- bootstrap -V 5.1.3x -->
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap-icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css" />
+
+	<!-- CSS Style and Aos Animation library -->
+	<link rel="stylesheet" type="text/css" href="css/Forms.css" />
+
+	<!-- font awesome -->
+	<link href="fontawesome/css/all.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+
+
+
+	<div class="container">
+
+		<div class="img">
+			<img src="Images/login2.svg">
+		</div>
+
+		<div class="register-content">
+
+			<form id="form" method="get" action="RegisterVideos.html" class="form-horizontal" style="height: 640px;">
+
+				<img src="Images/undraw_profile_pic_ic-5-t.svg">
+
+				<h2 class="title">اضافة كويز</h2>
+				<div id="quezName" class="input-div">
+
+					<div class="i">
+						<i class="fas fa-text-height"></i>
+					</div>
+
+					<div class="div">
+
+						<h5> السؤاال</h5>
+						<input  type="text" class="input" name="quez"  required>
+						
+					</div>
+				</div>
+			
+				
+				<button type="button"  
+				style="display: block;
+				margin-top: 20px;"class="btn btn-primary" name="button" onclick="newinput()">اضف الاجابات</button>
+			
+		
+			
+				
+
+
+				<input type="submit" class="btnLogin" style="background-color: #007bff;" value="اضافة الكويز">
+
+			</form>
+		</div>
+	</div>
+	
+	<script>
+	var id = 1;
+	var newinput = function() {
+
+
+	 var parent = document.getElementById('form');
+	var field = document.createElement("div");
+	field.className = "input-div";
+	field.id = "input" + id;
+	field.innerHTML=
+	`
+	              <div class="i numAnswer">
+					${id}
+					</div>
+
+					<div class="div">
+
+						
+						<input id="answerOfQuez" type="text" class="input" name="quezDescription" required">
+						
+				
+					</div>
+					<input type="checkbox"  name="inputOne" value="${id}">
+	`
+	parent.appendChild(field);
+	id += 1;
+}
+	</script>
+	
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

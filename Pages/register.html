@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+
+    <title>Register page</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- CSS Style and fontawesome library-->
+    <link rel="stylesheet" type="text/css" href="css/Forms.css">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+  
+    <!-- video library -->
+    <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+
+   
+</head>
+
+<body>
+   
+    <img class="wave waveRegister" src="Images/wave.png">
+    <div class="container">
+        
+        <!-- <video id="videoEnd" class="video-js video " controls preload="auto" width="797" height="448"
+            data-setup='{ "playbackRates": [0.5, 1, 1.5, 2] }'>
+
+            <source src="Images/viddeo.mp4" type="video/mp4" />
+            <source src="Images/viddeo.mp4" type="video/webm" />
+        </video> -->
+        <div class="img">
+			<img src="Images/login2.svg">
+		</div>
+		
+
+
+        <div class="register-content">
+
+           
+            <form id="registerForm" action="profile.html" class="form-horizontal" style="height: 600px;">
+
+                <img src="Images/undraw_profile_pic_ic-5-t.svg">
+                <h2 class="title">مرحبا بك</h2>
+
+
+                <div class="input-div main ">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5> الأسم كاملا</h5>
+                        <input type="text" class="input" name="firstName" required>
+                    </div>
+                </div>
+      
+    
+                <div id="PhoneNumber" class="input-div main">
+                    <div class="i">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="div">
+                        <h5>رقم الهاتف</h5>
+                        <input id="phone" type="text" class="input" name="PhoneNumer" onkeyup="validatePhone();"
+                            minlength="11" maxlength="11" required>
+                        <span class="check"></span>
+                    </div>
+                </div>
+                <ul class="Error">
+                    <li>
+                        هذا الرقم مستخدم من قبل
+                    </li>
+
+                </ul>
+                <div id="PhoneNumberParent" class="input-div main">
+                    <div class="i">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="div">
+                        <h5>رقم ولي الأمر</h5>
+                        <input id="phoneParent" type="text" class="input" name="PhoneNumer"
+                            onkeyup="validatePhoneParent();" minlength="11" maxlength="11" required>
+                        <span class="check"></span>
+                    </div>
+                </div>
+                <ul class="Error">
+                    <li>
+                        يجب ادخل رقم اخر غير رقمك
+                    </li>
+
+                </ul>
+
+                <div class="div">
+
+                    <select class="select" class="input" name="stages">
+                        <option selected>اختر الصف الدراسي</option>
+                        <option value="one">الصف الاول الثانوي</option>
+                        <option value="two">الصف الثاني الثانوي</option>
+                        <option value="three">الصف الثالث الثانوي</option>
+
+                    </select>
+                </div>
+
+
+
+                <div class="input-div main">
+                    <div class="i">
+                        <i class="fas fa-solid fa-address-card"></i>
+                    </div>
+                    <div class="div">
+                        <h5> العنوان كاملا </h5>
+                        <input type="text" class="input" required>
+                    </div>
+                </div>
+
+
+                <div id="Password" class="input-div password">
+
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+
+                    <div class="div">
+                        <h5> الرقم السري الخاص بك</h5>
+                        <input id="password" type="password" class="input" name="Password" onkeyup="validatePassword();"
+                            minlength="8" required>
+                        <span class="check"></span>
+                    </div>
+
+                </div>
+
+                <div id="PasswordConfirm" class="input-div password">
+
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+
+                    <div class="div">
+                        <h5> ادخل الرقم السري للتأكيد </h5>
+                        <input id="passwordConf" type="password" class="input" name="Password"
+                            onkeyup="validatePasswordConfirm();" minlength="8" required>
+                        <span class="check"></span>
+                    </div>
+
+                </div>
+                <ul class="Error">
+                    <li>
+                        يجب ان يكون متطابقا مع رقمك السري
+                    </li>
+
+                </ul>
+                <input type="submit" class="btnLogin Btn" style="background-color: #ffc100;" value="تسجيل الأشتراك">
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+   
+<script type="text/javascript" src="js/main.js"></script>
+   
+ <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
+  
+
+
+</body>
+
+</html>

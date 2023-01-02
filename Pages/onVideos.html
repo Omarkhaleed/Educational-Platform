@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <!--bootstrap -V 5.1.3x-->
+  <title>onVideos Page</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+  <!-- bootstrap -V 5.1.3x -->
+  <link rel="stylesheet" type="text/css" href="css/lib/bootstrap-icons.css" />
+  <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css" />
+
+  <!-- CSS Style and Aos Animation library -->
+  <link rel="stylesheet" type="text/css" href="css/pages.css" />
+  
+
+  <!-- font awesome -->
+  <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+
+
+<style>
+
+   
+form{
+    
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    
+    margin-top: -19px;
+    }
+    .btn{
+        margin-bottom: 16px;
+        margin-left: 19px;
+    }
+    .bttn{
+       width: 75%;
+        border-radius: 48px;
+        height: 50px;
+         margin: auto;
+        font-size: 23px;
+        padding-top: 2px;
+        font-weight: bold;
+        margin-bottom: 12px;
+        color: #ffff;
+    
+    }
+.col-md-6.registerCard{
+   
+   display: flex;
+   flex-direction: column;
+   margin: 29px;
+   border-radius: 9px;
+   margin-bottom: 85px;
+   background: #2f0d63;
+  border-radius: 30px;
+  padding: 50px;
+  z-index: 3;
+  box-shadow: 
+ 25px 25px 75px rgba(92, 0, 255, 0.25),
+ 10px 10px 70px rgba(92,0,255,0.25),
+ inset 5px 5px 10px rgba(92,0,255,0.5),
+ inset 5px 5px 20px rgba(255, 255, 255,0.2),
+ inset -5px -5px 15px rgba(92,0,255,0.75);
+}
+.col-md-6 span{
+    font-size: 23px;
+    position: relative;
+  color: #ffffff;
+  font-weight: 700;
+  background: indigo;
+    width: 50%;
+  
+    padding: 6px;
+    bottom: 40px;
+    border-radius: 9px;
+    position: relative;
+    bottom: 73px;
+    right: 26%;
+   
+}
+
+.btn-primary{
+      background: #0d6efd !important;
+    }
+.col-md-6 p {
+
+    font-size: 23px;
+    color:#ffc400;
+    font-weight: 700;
+    position: relative;
+    bottom: 42px;
+    
+}
+
+
+.dropdown-menu{
+    display: none;
+    width: 50px;
+    right: 19%;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .dropdown-item{
+   text-align: right;
+  }
+  .dropdown-item .input{
+   float: left;
+   position: relative;
+   bottom:20px;
+  }
+  .dropdown-item:hover {
+    color: #1e2125;
+    background-color: #15002b;
+    border-radius: 9px;
+  }
+
+  .dropdown-submenu .dropdown-item label{
+    width: 75px;
+   }
+  .dropdown-menu li {
+     display: block;
+     height: 37px;
+    }
+    .dropdown-menu .dropdown-submenu {
+        position: absolute;
+    display: none;
+   
+    right: 93%;
+    top:-1px;
+    cursor: pointer;
+    /* right: 100%;
+    top: -7px; */
+    }
+    .dropdown-menu .dropdown-submenu-left {
+    right: 100%;
+    left: auto;
+    }
+
+
+
+    .dropdown-container {
+        display: none;
+        background-color: #ffffff;
+        padding-left: 8px;
+      }
+      
+
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+      }
+      
+
+      .menu{
+  width: 70%;
+  position: relative;
+  right: 77px;
+ }
+      .nav label{
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        display: block;
+        cursor: pointer;
+      }
+      .button span{
+        float: right;
+        line-height: 40px;
+        transition: 0.5s;
+      }
+      .button span.rotate{
+        transform: rotate(-180deg);
+      }
+      .nav ul{
+      
+        background: indigo;
+        list-style: none;
+      
+       
+        border-radius: 5px;
+        display: none;
+      }
+    
+      .nav .menu:before{
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        background: #1b1b1b;
+        right: 20px;
+        top: -10px;
+        transform: rotate(45deg);
+        z-index: -1;
+      }
+      .nav ul li{
+        line-height: 40px;
+        padding: 8px 20px;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+      }
+      .nav ul li label{
+        font-size: 18px;
+      }
+      .nav ul li a{
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+      }
+    
+      ul{
+        padding-left: 0 !important;
+      }
+      .nav ul ul{
+        position: static;
+      }
+      .nav ul ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+      }
+      .nav ul ul li a{
+        color: #e6e6e6;
+        font-size: 17px;
+      }
+      .nav ul li span{
+        font-size: 20px;
+        float: right;
+        margin-top: 10px;
+        padding: 0 10px;
+        transition: 0.5s;
+      }
+      .nav ul li span.rotate{
+        transform: rotate(-180deg);
+      }
+  
+      body.dark-theme .col-md-6.registerCard{
+   background-color: #e1e1e1;;
+  border: 3px solid #2f0d63;
+  box-shadow: none;
+}
+body.dark-theme strong{
+  color: #2f0d63;
+}
+body.dark-theme .nav ul {
+  background: #bcbcbc;
+}
+body.dark-theme .nav label{
+color:#27006c;
+}
+body.dark-theme .firstBtn{
+  color:#fff !important;
+}
+body.dark-theme .dropdown-item:hover {
+ background-color: #ffffff;
+}
+@media (max-width :767px){
+
+  .dropdown-item .input {
+    float: inherit;
+  position: inherit;
+  bottom: 0px;
+}
+.col-md-6 span{
+  right: 0%;
+    width: 100%;
+}
+
+.bttn{
+  width: 100%;
+}
+
+.menu{
+width: 100%;
+right:0px;
+}
+
+}
+  </style>
+  
+</head>
+
+
+
+<body >
+  <a href="#" class="logo">
+    <img src="Images/undraw_profile_pic_ic-5-t.svg" alt="" /></a>
+  <div class="containe">
+    <div class="row">
+      <div class="col-3">
+        <div class="navigation active">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="icon"><i class="bi bi-person-fill"></i></span>
+                <span class="title" style="font-size: 25px">عمر خالد السيد</span>
+              </a>
+            </li>
+
+        
+
+            <a  class=" btn-toggle  btn btn-info mode"> 🌞      🌙   </a>
+
+            <li>
+              <a href="userProfile.html">
+                <span class="icon"><i class="bi bi-house-fill"></i></span>
+                <span class="title"> صفحتك الرئيسية </span>
+              </a>
+            </li>
+
+            <li>
+              <a href="Notifications.html">
+                
+                <span class="icon"><i class="bi bi-bell-fill"></i></span>
+                <span class="Notification">55</span>
+                <span class="title">  صفحةالاشعارات </span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="information.html">
+                <span class="icon"><i class="bi bi-person-check-fill"></i></span>
+                <span class="title"> الملف الشخصي </span>
+              </a>
+            </li>
+
+            <li>
+              <a href="offVideos.html">
+                <span class="icon"> <i class="bi bi-play-btn-fill"></i></span>
+
+                <span class="title"> الفيديوهات المحجوزة </span>
+              </a>
+            </li>
+
+            <li>
+              <a href="onVideos.html">
+                <span class="icon"> <i class="bi bi-play-btn-fill"></i></span>
+
+                <span class="title"> الفيديوهات الخاصة بك </span>
+              </a>
+            </li>
+
+            <li>
+              <a href="quezesPage.html">
+                <span class="icon"><i class="bi bi-patch-check-fill"></i></span>
+                <span class="title"> الكويزات والاختبارات</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="quezesDeatails.html">
+                <span class="icon"><i class="bi bi-card-checklist"></i></span>
+                <span class="title">درجات الكويزات</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="RegisterVideos.html">
+                <span class="icon"><i class="bi bi-wallet2"></i></span>
+                <span class="title"> حجز درس جديد</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="index.html">
+                <span class="icon"><i class="bi bi-reception-4"></i></span>
+                <span class="title">زيارة المنصة</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="icon"><i class="bi bi-box-arrow-right"></i></span>
+                <span class="title">الخروج</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="main active">
+      <div class="topbar">
+        <div class="toggle">
+          <i class="bi bi-list"></i>
+        </div>
+      </div>
+
+      <div class="classText">
+        <h2>الفيديوهات الخاصة بك</h2>
+      </div>
+
+      <!-- cards -->
+      <div class="home-stats text-center">
+        <div class="row DashCards" style="justify-content: center;">
+
+          <div class="col-md-6 registerCard">
+
+            <span>الفيزياء الكهربائية </span>
+           
+            <p> الدروس المتاحة  : <strong >8 دروس</strong> </p>
+  
+            <form class="nav" action="login.html" method="get">
+  
+              <label for="btn" class="button firstBtn btn bttn btn-primary dropdown-btn">  الكورس
+                <span class="fas fa-caret-down"></span>
+              </label>
+  
+              <ul class="menu">
+                <input type="hidden" name="type" value="الفيزياء الكهربائية">
+  
+                <li>
+                  <label class="dropdown-btn">الوحدة الاولي
+                    <span class="fas fa-caret-down"></span>
+                  </label>
+                </li>
+  
+                <li>
+                  <label class=" dropdown-btn">الوحدة الثانية
+                    <span class="fas fa-caret-down"></span>
+                  </label>
+  
+  
+                  <ul>
+  
+                    <li class="dropdown-item">
+                      <label for="input1"> الدرس الاول</label>
+                     <div class="badge bg-secondary input">2 مشاهدة</div>
+                    </li>
+  
+  
+                  </ul>
+  
+                </li>
+  
+  
+                <li>
+                  <label class="dropdown-btn">الوحدة الثالثة
+                    <span class="fas fa-caret-down"></span>
+                  </label>
+  
+  
+  
+                  <ul>
+  
+                    <li class="dropdown-item">
+                      <label for="input1">  (1) اساسيات الجيولوجيا فلتكن هناك ارض</label>
+                      <input type="checkbox" id="input1" name="inputOne" value=" الثالثة">
+                    </li>
+  
+  
+                  </ul>
+  
+                </li>
+
+              </ul>
+  
+            
+            </form>
+  
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Scripts Links  -->
+
+  <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="js/lib/bootstrap.bundle.min.js"></script>
+ 
+ 
+  <!--load all styles  fontawesome-->
+  <script defer src="fontawesome/js/all.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

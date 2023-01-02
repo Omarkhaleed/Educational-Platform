@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" >
+
+<head>
+
+	<title> Add Branch</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+	<!-- bootstrap -V 5.1.3x -->
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap-icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css" />
+
+	<!-- CSS Style and Aos Animation library -->
+	<link rel="stylesheet" type="text/css" href="css/Forms.css" />
+
+	<!-- font awesome -->
+	<link href="fontawesome/css/all.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+	<img class="wave" src="Images/wave.png">
+
+	<div class="container">
+		
+		
+		<div class="img">
+			<img src="Images/login2.svg">
+		</div>
+		
+	
+	
+		<div class="register-content">
+
+			<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				<strong>رقم الهاتف او الرقم السري غير صحيح
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+	
+		   
+			<form id="form" action="RegisterVideos.html" class="form-horizontal">
+
+				<img src="Images/undraw_profile_pic_ic-5-t.svg">
+
+				<h2 class="title">مرحبا بك</h2>
+
+				<div id="PhoneNumber" class="input-div">
+
+					<div class="i">
+						<i class="fas fa-phone"></i>
+					</div>
+
+					<div class="div">
+						<h5>رقم الهاتف</h5>
+						<input id="phone" type="text" class="input" name="phoneNumber" onkeyup="validatePhone();"
+							minlength="11" maxlength="11" required>
+						<span class="check"></span>
+
+					</div>
+				</div>
+			
+				</ul>
+
+
+				<div id="Password" class="input-div password">
+
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+
+					<div class="div">
+						<h5> الرقم السري الخاص بك</h5>
+						<input id="password" type="password" class="input" name="Password"
+							minlength="8" required>
+						
+					</div>
+
+				</div>
+
+				<a href="ask_reset_password.html" style="color: #aca200; margin-top:10px">هل نسيت رقمك السري؟</a>
+				
+				<input type="submit" class="btnLogin  Btn" style="background-color: #218838 !important;"
+					value="تسجيل الدخول">
+					<!-- new -->
+				<a href="register.html" class="btnLogin"
+					style="background-color:#007bff !important; text-align: center;">اشتراك جديد</a>
+
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>

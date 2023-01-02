@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -V 5.1.3x -->
+  <!-- bootstrap -V 5.1.3x -->
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
+   
+    <link rel="stylesheet" type="text/css" href="css/Quezes.css">
+
+</head>
+
+<body>
+   
+
+ <!-- Scroll Right -->
+ <div id="progressbar"></div>
+ <div id="scrollPath"></div>
+
+
+  <nav class="navbar navbar-expand-lg position-sticky top-0 w-100 en" style="z-index: 99;">
+    <div class="container">
+        <a href="#" class="logo"> <img src="Images/geology.png" alt=""></a>
+    <h1>Alfayed</h1>
+      <div class="navbar-nav ms-auto">
+        
+        <a class="blue btn btn-primary" href="userProfile.html">
+          الصفحة الشخصية <i class="bi bi-person-check-fill"></i></a>
+        <a class=" red btn btn-outline-danger" href="register.html"> تسجيل الخروج <i
+            class="bi bi-box-arrow-in-right"></i> </a>
+            <a  class=" btn-toggle  btn btn-info mode"> 🌞      🌙   </a>
+      </div>
+      
+    </div>
+  </nav>
+
+
+    <section class="Quiz_main mt-5 " >
+        <div class="container">
+          
+            <div class="row">
+                
+                <div class="classText">
+                <h2 class="text-center mb-5">
+                  الوحدة الاولي - الدرس الاول
+                </h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="card text-center position-relative cardPin">
+                        <div class="card-body ">
+                            <p class="card-text Notes">
+                             هذا الاختبار يحتوي علي 20 سؤال كل سؤال = 2 درجتين
+                            </p>
+                        </div>
+                    </div>
+                </div>
+ 
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">تنبيهات شاملة</h5>
+         
+        </div>
+        <div class="modal-body">
+        <ul>
+            <li> لك ثلاث مرات فقط لكي تمتحن هذا الأختبار</li>
+            <li>تضاف فقط درجة المرة الأولي من الثلاث مرات</li>
+            <li> اذا خرجت من الكويز سوف تحصل علي صفر درجات</li>
+            <li> الحصول علي الدرجة النهائية من المرة الأولي ستحصل علي نقاط اضافية</li>
+
+        </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">موافق</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+              
+            </div>
+        </div>
+    </section>
+
+
+ <section class="Questions mt-5 ">
+<div class="container">
+    <div class="row">
+        <form action="{% url 'result' %}" method="post">
+            <input type="hidden" name="quiz_id" value="{{quiz.id}}">
+            
+            <div class="col-md-12">
+                <span class="question-num">1</span>
+                <div class="card mb-4 shadow" >
+                    <div class="card-body">
+                        
+                        <h5 class="card-title">إذا كانت مقاومة موصل 42 ثابتة يمر به تيار كهربى بشدة معينة فإن شدة التيار تتضاعف عند 
+                            
+                        </h5>
+                        <hr>
+                        
+                        <p class="card-text">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="1"
+                                    id="flexRadioDefault1" value="1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    زيادة فرق الجهد الي الضعف
+                                </label>
+                            </div>
+                            
+                        </p>
+                        <p class="card-text">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="1"
+                                    id="flexRadioDefault1" value="2">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    نقص فرق الجهد إلى النصف
+                                </label>
+                            </div>
+                            
+                        </p>
+                        <p class="card-text">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="1"
+                                    id="flexRadioDefault1" value="3">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    زيادة فرق الجهد إلى الثلث
+                                </label>
+                            </div>
+                            
+                        </p>
+                        <p class="card-text">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="1"
+                                    id="flexRadioDefault1" value="4">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    نقص فرق الجهد إلى الثلث
+                                </label>
+                            </div>
+                            
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+                 
+
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-3 d-flex justify-content-around flex-column">
+                    <a href="resultHady.html" class="btn btn-outline-primary btn-lg rounded-pill mb-5 shadow">
+                        انهاء الاختبار 
+                         </a>
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" name="quiz_id" value="{{exam.id}}" id="">
+        </form>
+
+
+
+
+
+    </section>
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap.bundle.min.js"></script>
+  
+   
+
+    <script>
+        $(window).on('load', function() {
+  $('#exampleModal').modal('show');
+});
+        $('#myModal').on('shown.bs.modal', function () {
+         $('#myInput').trigger('focus')
+})
+    </script>
+     <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

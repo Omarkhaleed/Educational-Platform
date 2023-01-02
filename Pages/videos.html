@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+  <head>
+  
+    <title> Videos Page</title>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+  
+  
+  
+    <!-- bootstrap -V 5.1.3x -->
+    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
+  
+  
+    <!-- CSS Style and  video library -->
+    <link rel="stylesheet" type="text/css" href="css/RegisterVideos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+  
+    <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+  
+    <!-- font awesome -->
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+  
+    <!-- <link
+        href="node_modules/video.js/dist/video-js.css"
+        rel="stylesheet"
+      /> -->
+      <link href="node_modules/videojs-plugin-quality-selector/dist/css/quality-selector.css" rel="stylesheet" />
+    <style>
+      /* #vv::before{
+      content: "";
+      position:absolute;
+      width: 200px;
+      height: 200px;
+      color:red ;
+      
+    } */
+      .ss {
+        position: relative;
+      }
+  
+  
+  
+  
+  
+      
+    </style>
+  
+  
+  </head>
+  
+  <body  >
+  
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+  
+    <nav class="navbar navbar-expand-lg position-sticky top-0 w-100 en" style="z-index: 99;">
+      <div class="container">
+        <a href="#" class="logo"> <img src="Images/geology.png" alt=""></a>
+        <h1>Alfayed</h1>
+        <div class="navbar-nav ms-auto">
+          <!-- <a  class=" btn-toggle  btn btn-info mode">🌙 Light  🌞 | Dark </a> -->
+          <a class="blue btn btn-primary" href="userProfile.html">
+            الصفحة الشخصية <i class="bi bi-person-check-fill"></i></a>
+          <a class=" red btn btn-outline-danger" href="register.html"> تسجيل الخروج <i
+              class="bi bi-box-arrow-in-right"></i> </a>
+  
+          <a class=" btn-toggle  btn btn-info mode"> 🌞 🌙 </a>
+        </div>
+  
+      </div>
+    </nav>
+  
+  
+  
+    <section class="start">
+  
+  
+      <div class="container-fluid categories">
+  
+        <div class="classText">
+          <h2> الباب الأول - الدرس الأول </h2>
+        </div>
+  
+        <div class="row">
+  
+          <div class="col-8">
+            <div class="ss">
+              <video id="vv" data="01284147290" class="video-js video vjs-default-skin" controls preload="auto" width="797" height="448"
+                data-setup='{ "playbackRates": [0.5, 1, 1.5, 2] }'>
+  
+  
+  
+               
+                <!-- <source
+                src="Images/viddeo.mp4"
+                type="video/mp4"
+                label="720P"
+              />
+              <source
+                src="Images/viddeo.mp4"
+                type="video/mp4"
+                label="480P"
+               
+              />
+              <source
+                src="Images/viddeo.mp4"
+                type="video/mp4"
+                label="360P"
+                selected="true"
+                />
+                <source
+                src="Images/viddeo.mp4"
+                type="video/mp4"
+                label="144P"
+               
+                /> -->
+                <source src="Images/أساسيات 1 لتكن هناك أرض.mp4" type="video/mp4" res="240" label="240p"/>
+                <source src="Images/أساسيات 1 لتكن هناك أرض.mp4" res="360" label="360p" />
+                <source src="Images/أساسيات 1 لتكن هناك أرض.mp4" type="video/mp4" res="480" label="480p"/>
+                <source src="Images/أساسيات 1 لتكن هناك أرض.mp4" type="video/mp4" res="720" label="720p"/>
+                <!-- <source src="Images/viddeo.mp4" type="video/webm" /> -->
+  
+              </video>
+  
+  
+            </div>
+          </div>
+  
+  
+  
+          <div class="col-4 videoLists" data="فيديوهاتك">
+  
+  
+            <div class='img-thumbnail item-box'>
+  
+              <img class="logo" src="Images/undraw_video_filesssss_fu10.svg" height="180px" width="100%" alt="">
+              <div class='caption'>
+                <h3>الفيزياء الكهربائية</h3>
+                <h5> الباب الأول - الدرس الأول</h5>
+                <a href="videos.html"> شاهد الأن</a>
+              </div>
+            </div>
+  
+  
+  
+            <div class='img-thumbnail item-box'>
+  
+              <img class="logo" src="Images/undraw_video_filesssss_fu10.svg" height="180px" width="100%" alt="">
+              <div class='caption'>
+                <h3>الفيزياء الكهربائية</h3>
+                <h5> الباب الأول - الدرس الأول</h5>
+                <a href="videos.html"> شاهد الأن</a>
+              </div>
+            </div>
+  
+  
+            <div class='img-thumbnail item-box'>
+  
+              <img class="logo" src="Images/undraw_video_filesssss_fu10.svg" height="180px" width="100%" alt="">
+              <div class='caption'>
+                <h3>الفيزياء الكهربائية</h3>
+                <h5> الباب الأول - الدرس الأول</h5>
+                <a href="videos.html"> شاهد الأن</a>
+              </div>
+            </div>
+  
+            <div class='img-thumbnail item-box'>
+  
+              <img class="logo" src="Images/undraw_video_filesssss_fu10.svg" height="180px" width="100%" alt="">
+              <div class='caption'>
+                <h3>الفيزياء الكهربائية</h3>
+                <h5> الباب الأول - الدرس الأول</h5>
+                <a href="videos.html"> شاهد الأن</a>
+              </div>
+            </div>
+  
+  
+  
+  
+          </div>
+  
+  
+        </div>
+  
+  
+        <br>
+        <hr>
+        <div class="row">
+  
+          <div class="col-8 words">
+  
+            <h3> بعض النقاط الهامة <i class="bi bi-check"></i></h3>
+  
+            <p>
+              الفِيزِيَاءُ أو الفِيزِيقَا، وتُسَمّى أيضًا بـ الطَبِيعِيَّاتِ أو عِلْمِ الطَبِيعَةِ هو العلم الذي يدرس
+              المفاهيم الأساسية مثل الطاقة، القوة، والزمان، وكل ما ينبع من هذا، مثل الكتلة، المادة وحركتها. وعلى نطاق
+              أوسع، هو التحليل العام للطبيعة، والذي يهدف إلى فهم كيف يعمل الكون.
+            </p>
+  
+  
+          </div>
+  
+          <div class="col-4 quezLists" quezes="كويزاتك">
+  
+  
+            <div class='img-thumbnail item-box'>
+  
+              <img class="logo" src="Images/undraw_online_test_gba7.svg" height="180px" width="100%" alt="">
+              <div class='caption'>
+                <h3>الفيزياء الكهربائية</h3>
+                <h5> الباب الأول - الدرس الأول</h5>
+                <a href="quizHady.html"> امتحن الأن</a>
+              </div>
+            </div>
+  
+  
+  
+  
+            <div class='img-thumbnail item-box'>
+  
+              <img class="logo" src="Images/undraw_online_test_gba7.svg" height="180px" width="100%" alt="">
+              <div class='caption'>
+                <h3>الفيزياء الكهربائية</h3>
+                <h5> الباب الأول - الدرس الأول</h5>
+                <a href="quizHady.html"> امتحن الأن</a>
+              </div>
+            </div>
+  
+            <div class='img-thumbnail item-box'>
+  
+              <img class="logo" src="Images/undraw_online_test_gba7.svg" height="180px" width="100%" alt="">
+              <div class='caption'>
+                <h3>الفيزياء الكهربائية</h3>
+                <h5> الباب الأول - الدرس الأول</h5>
+                <a href="quizHady.html"> امتحن الأن</a>
+              </div>
+            </div>
+  
+  
+          </div>
+  
+  
+  
+        </div>
+  
+      </div>
+  
+    </section>
+  
+  
+  
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/lib/aos.js"></script>
+  
+    <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+    <script src="node_modules/video.js/dist/video.min.js"></script>
+     
+    <script src="node_modules/videojs-plugin-quality-selector/dist/js/videojs-plugin-quality-selector.min.js"></script>
+    
+    
+    <script>
+
+      videojs('vv', {}, function() {
+        var player = this;
+  
+        player.controlBar.addChild('QualitySelector');
+      });
+  
+  </script>
+  
+  </html>
+  
+  
+  
+  
+  
+  

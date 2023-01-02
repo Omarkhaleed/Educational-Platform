@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+	<title> Add video page </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+	<!-- bootstrap -V 5.1.3x -->
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap-icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css" />
+
+	<!-- CSS Style and Aos Animation library -->
+	<link rel="stylesheet" type="text/css" href="css/Forms.css" />
+
+	<!-- font awesome -->
+	<link href="fontawesome/css/all.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+
+
+	<img class="wave" src="Images/wave.png">
+	<div class="container">
+
+	
+		<div class="register-content">
+
+			<form id="form" action="RegisterVideos.html" class="form-horizontal">
+
+			
+
+				<h2 class="title">اضافة كويز</h2>
+
+			
+				<div id="quezName" class="input-div">
+
+					<div class="i">
+						<i class="fas fa-text-height"></i>
+					</div>
+
+					<div class="div">
+
+						<h5>اسم الدرس</h5>
+						<input  type="text" class="input" name="quez"  required>
+						
+					</div>
+				</div>
+
+			
+
+				<div id="quezDesc" class="input-div">
+
+					<div class="i">
+						<i class="fas fa-info"></i>
+					</div>
+
+					<div class="div">
+
+						<h5> وصف الدرس</h5>
+						<input  type="text" class="input" name="quezDescription" required">
+				
+					</div>
+				</div>
+
+
+				<div class="div">
+
+					<select class="select" class="input" name="stages">
+						<option selected>اختر الصف الدراسي</option>
+						<option value="one">الصف الاول الثانوي</option>
+						<option value="two">الصف الثاني الثانوي</option>
+						<option value="three">الصف الثالث الثانوي</option>
+
+					</select>
+				</div>
+				<div class="div">
+
+					<select class="select" class="input" name="stages">
+						<option selected> الفرع والوحدة </option>
+						<option value="one"> الفيزياء الكهربائية | الوحدة الاولي</option>
+						<option value="two">الفيزياء الكهربائية | الوحدة الثانية</option>
+						<option value="three"> الفيزياء الكهربائية | الوحدة الثالثة</option>
+
+					</select>
+				</div>
+
+
+
+				<input type="submit" class="btnLogin" style="background-color: #007bff;" value="اضافة الكويز">
+
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>

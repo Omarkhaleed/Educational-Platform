@@ -1,0 +1,86 @@
+<!DOCTYPE html>{% load static %}
+<html lang="ar" dir="rtl">
+
+<head>
+    <!--bootstrap -V 5.1.3x-->
+    <title>{{title}}</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- bootstrap -V 5.1.3x -->
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}css/lib/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}css/lib/bootstrap.min.css" />
+
+    <!-- CSS Style and Aos Animation library -->
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}css/pages.css" />
+
+    <!-- font awesome -->
+    <link href="{% static 'main/' %}fontawesome/css/all.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <a href="#" class="logo">
+        <img src="{% static 'main/' %}Images/undraw_profile_pic_ic-5-t.svg" alt="" /></a>
+    <div class="containe">
+        <div class="row">
+            {% include 'student/sidebar.html' %}
+        </div>
+
+        <div class="main active">
+            <div class="topbar">
+                <div class="toggle">
+                    <i class="bi bi-list"></i>
+                </div>
+            </div>
+
+            <div class="classText">
+                <h2>الفيديوهات الخاصة بك</h2>
+            </div>
+
+            <!-- cards -->
+            {% if request.user.student.get_lesson_active %}
+            <div class="home-stats text-center">
+                <div class="row DashCards">
+                    {% for lesson in request.user.student.get_lesson_active %}
+                    <div class="col-md-3">
+                        <a href="{% url 'lesson' lesson.lesson.id lesson.get_first_lesson %}">
+                            <div class="img-thumbnail item-box">
+                                <img class="logo" src="{% static 'main/' %}Images/undraw_secure_files_re_6vdh.svg"
+                                    height="200px" width="190px" alt="">
+                                <div class="caption">
+                                    <h3>{{lesson.lesson.name}}
+                                    </h3>
+                                    <a href="{% url 'lesson' lesson.lesson.id lesson.get_first_lesson %}"
+                                        class="btn btn-warning"> الدخول الان </a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% else %}
+            <div class="col-md-12 d-flex flex-column align-items-center">
+                <h1>لا يوجد دروس محجوزة</h1>
+                <h2 class="btn btn-primary mt-3"><a class="text-light" href="{% url 'register_videos' %}">احجز
+                        درسك
+                        الان</a></h2>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Scripts Links  -->
+
+    <script type="text/javascript" src="{% static 'main/' %}js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'main/' %}js/lib/bootstrap.bundle.min.js"></script>
+
+
+    <!--load all styles  fontawesome-->
+    <script defer src="{% static 'main/' %}fontawesome/js/all.js"></script>
+    <script type="text/javascript" src="{% static 'main/' %}js/main.js"></script>
+</body>
+
+</html>
