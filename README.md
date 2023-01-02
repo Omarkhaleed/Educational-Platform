@@ -30,7 +30,8 @@
 - It provides Courses , Questions , Quizes and Summaries for each grade.
 - Following and tracking the students and help them to get all their rights.
 - Powerful videos library and secureing videos.
-- It was based on MVC Arch.
+- It is based on MVC Arch.
+- It is  full responsive for tablets , mobile phones and Desktop.
 
 ## Screenshots
 ![Example screenshot](./Images/Screen.png)
