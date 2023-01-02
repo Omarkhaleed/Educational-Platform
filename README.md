@@ -33,7 +33,7 @@
 - It was based on MVC Arch.
 
 ## Screenshots
-![Example screenshot](./Iamges/Screen.png)
+![Example screenshot](./Images/Screen.png)
 
 
 ## Project Status
