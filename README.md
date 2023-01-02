@@ -4,6 +4,7 @@
 > Videos demo [_here_](https://drive.google.com/drive/folders/1-wji3srZPqRxGEz3pByqfGXDy5g-S8m-?usp=share_link).
 
 ## Table of Contents
+
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
@@ -13,30 +14,32 @@
 
 
 ## General Information
-- Olympic Gym is the first Gym in Suez that helping you achieve your weight loss and muscle goals and Offering you various packages that suit you best.
-- We Providing you with the top-notch classes and newest equipment.
-- Our trainers are highly qualified and know what they’re doing and our most important goal was to create a welcoming atmosphere and community in which   everyone feels a sense of belonging.
-
+- It is a personal educational platform for Mr.Alfayed to teach Chemistry and Geology to students.
+- I developed only the Front End pages and Back End  by my friend : Hady Taha.
+- This only the code and files for front End.
+- I developed it from Scratch.
 
 ## Technologies Used
-- Front End - HTML5 , CSS3 , JavaScript, Bootstrap
 
- 
+- Front End - HTML5 , CSS3 , JavaScript, Bootstrap, Videos Library and Font awesome.
+- Back End - Python and Dijango but not by me.
 
 ## Features
 
-- Contains Sections such : Home , About us , Classes , Schedule Sections
-- All What you need to Know you will get it on website
-- Full description for each sport and our classes
-- Our Trainee can check his program by Entering ID and PhoneNumber
-- Small Function : Based on API and connected to our Gymnasium System
+- This educational platform consists of 19 pages for Students and 13 pages for Admins.
+- It provides Courses , Questions , Quizes and Summaries for each grade.
+- Following and tracking the students and help them to get all their rights.
+- Powerful videos library and secureing videos.
+- It was based on MVC Arch.
 
 ## Screenshots
-![Example screenshot](./imges/Screen.png)
+![Example screenshot](./Iamges/Screen.png)
 
 
 ## Project Status
 Project is: _complete_ 
+
+
 
 
 
