@@ -1,7 +1,7 @@
 
 # Educationl Platform
 > It is an educational online platform for students in Chemistry and Geology it is now owned for Mr.Alfayed...
-> Videos demo [_here_](https://drive.google.com/drive/folders/1-wji3srZPqRxGEz3pByqfGXDy5g-S8m-?usp=share_link).
+>- Videos demo and Full description [_here_](https://drive.google.com/drive/folders/1-wji3srZPqRxGEz3pByqfGXDy5g-S8m-?usp=share_link).
 
 ## Table of Contents
 
